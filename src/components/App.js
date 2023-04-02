@@ -43,7 +43,7 @@ const App = () => {
                 <section className="new-title-content-author">
                   <h3 className="news-title">{items.title}</h3>
                   <section className="new-content-author">
-                    <p className="news-description">{items.description}</p>;
+                    <p className="news-description">{items.description}</p>
                     <p className="news-source">
                       <strong>Source:</strong>
                       {items.source.name}
