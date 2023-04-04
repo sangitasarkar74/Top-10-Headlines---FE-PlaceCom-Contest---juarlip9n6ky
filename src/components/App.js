@@ -11,12 +11,15 @@ const App = () => {
       `https://gnews.io/api/v4/top-headlines?category=${category}&apikey=18627a52ea958ef443c09c08adb9a4a5&max=10&lang=en`
     )
       .then((res) => res.json())
-      .then((data) => setNewsData(data.articles));
-    setLoading(false);
+      .then((data) => {
+        setNewsData(data.articles);
+        setLoading(false);
+      });
   }, [category]);
 
   const handleChange = (event) => {
     setCategory(event.target.value);
+    setLoading(true);
   };
 
   return (
